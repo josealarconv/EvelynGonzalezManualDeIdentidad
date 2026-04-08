@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandbook - Evelyn Gonzalez</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para los emojis/iconos internos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons para el menú lateral -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Estilos para el cambio de pestañas */
+        .tab-content { display: none; }
+        .tab-content.active { 
+            display: block; 
+            animation: fadeIn 0.4s ease-in-out; 
+        }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+    </style>
+</head>
+<body class="bg-[#F0F4F8] font-sans text-[#172A45] overflow-hidden">
+
+    <div class="flex h-screen w-full">
+        <!-- Sidebar -->
+        <div class="w-64 bg-[#172A45] text-white flex flex-col shadow-xl z-10 shrink-0">
+            <div class="p-6 text-center border-b border-[#1E3A5F]">
+                <img 
+                    src="https://i.postimg.cc/6qQj2XSd/Logo-Evelyn-Gonzalez-Usa-(Vertical).png" 
+                    alt="Evelyn Gonzalez Logo" 
+                    class="h-24 mx-auto object-contain bg-white p-2 rounded-lg"
+                />
+                <h1 class="mt-4 text-sm font-bold tracking-widest text-[#C5A880] uppercase" style="font-family: 'Outfit', sans-serif;">Brandbook</h1>
+            </div>
+            <nav class="flex-1 overflow-y-auto py-4">
+                <ul id="tab-menu">
+                    <li>
+                        <button onclick="switchTab('esencia', this)" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 bg-[#C5A880] text-[#172A45] font-bold" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <i data-lucide="book" class="w-5 h-5"></i>
+                            <span class="text-sm">1. Esencia de Marca</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('visual', this)" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 text-gray-300 hover:bg-[#1E3A5F] hover:text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <i data-lucide="palette" class="w-5 h-5"></i>
+                            <span class="text-sm">2. Identidad Visual</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('voz', this)" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 text-gray-300 hover:bg-[#1E3A5F] hover:text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                            <span class="text-sm">3. Tono y Voz</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('contenido', this)" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 text-gray-300 hover:bg-[#1E3A5F] hover:text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <i data-lucide="layers" class="w-5 h-5"></i>
+                            <span class="text-sm">4. Pilares de Contenido</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('marketing', this)" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 text-gray-300 hover:bg-[#1E3A5F] hover:text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <i data-lucide="megaphone" class="w-5 h-5"></i>
+                            <span class="text-sm">5. Ángulos de Venta</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('reglas', this)" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 text-gray-300 hover:bg-[#1E3A5F] hover:text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                            <span class="text-sm">6. Reglas de Oro (Legal)</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="p-4 border-t border-[#1E3A5F] text-xs text-gray-400 text-center font-medium">
+                Versión Redes Sociales<br/>© 2026 Evelyn Gonzalez
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 overflow-y-auto p-8 md:p-12 lg:p-16 relative">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12 min-h-full">
+                
+                <!-- TAB 1: ESENCIA -->
+                <div id="esencia" class="tab-content active">
+                    <h2 class="text-3xl font-bold text-[#172A45] mb-6 border-b border-[#F0F4F8] pb-4" style="font-family: 'Outfit', sans-serif;">1. Esencia de la Marca</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl border border-gray-100">
+                            <h3 class="text-[#172A45] font-bold mb-2 uppercase text-sm tracking-wider" style="font-family: 'Outfit', sans-serif;">Nuestro Propósito</h3>
+                            <p class="text-[#6D7278] leading-relaxed text-sm">
+                                Ser el apoyo integral, legal y optimizado para la comunidad hispana en Estados Unidos. Transformamos el estrés de la burocracia en procesos seguros, rápidos y claros.
+                            </p>
+                        </div>
+                        <div class="bg-[#172A45] p-6 rounded-2xl text-white relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-[#C5A880] opacity-20 rounded-bl-full"></div>
+                            <h3 class="text-[#C5A880] font-bold mb-2 uppercase text-sm tracking-wider z-10 relative" style="font-family: 'Outfit', sans-serif;">Nuestro Eslogan Principal</h3>
+                            <p class="text-2xl font-bold mt-2 z-10 relative" style="font-family: 'Outfit', sans-serif;">
+                                "Trámites sin estrés."
+                            </p>
+                            <p class="text-sm text-gray-300 mt-2 z-10 relative">
+                                Trabajamos hoy para transformar tu futuro en EE.UU.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-[#172A45] mb-4 mt-8" style="font-family: 'Outfit', sans-serif;">Nuestros 4 Pilares Filosóficos</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-5 border border-gray-100 rounded-2xl hover:shadow-md transition-shadow bg-white">
+                            <div class="bg-[#F0F4F8] text-[#C5A880] p-3 rounded-full flex items-center justify-center"><i class="fas fa-handshake"></i></div>
+                            <div>
+                                <h4 class="font-bold text-[#172A45]" style="font-family: 'Outfit', sans-serif;">Hablamos más que tu idioma</h4>
+                                <p class="text-[#6D7278] text-sm mt-1">Entendemos la cultura, los miedos y los retos del inmigrante. Brindamos empatía, no solo traducciones.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 border border-gray-100 rounded-2xl hover:shadow-md transition-shadow bg-white">
+                            <div class="bg-[#F0F4F8] text-[#C5A880] p-3 rounded-full flex items-center justify-center"><i class="fas fa-tasks"></i></div>
+                            <div>
+                                <h4 class="font-bold text-[#172A45]" style="font-family: 'Outfit', sans-serif;">Procesos Inteligentes</h4>
+                                <p class="text-[#6D7278] text-sm mt-1">Respetamos el tiempo del cliente. Optimizamos la recolección de datos; por ejemplo, el cónyuge no necesita volver a aportar el acta de matrimonio o documentos ya subidos por el titular.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 border border-gray-100 rounded-2xl hover:shadow-md transition-shadow bg-white">
+                            <div class="bg-[#F0F4F8] text-[#C5A880] p-3 rounded-full flex items-center justify-center"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-[#172A45]" style="font-family: 'Outfit', sans-serif;">Transparencia e Integridad</h4>
+                                <p class="text-[#6D7278] text-sm mt-1">Honestidad desde el día uno. Construimos confianza basados en expectativas reales y claridad absoluta en los trámites.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 border border-gray-100 rounded-2xl hover:shadow-md transition-shadow bg-white">
+                            <div class="bg-[#F0F4F8] text-[#C5A880] p-3 rounded-full flex items-center justify-center"><i class="fas fa-hands-helping"></i></div>
+                            <div>
+                                <h4 class="font-bold text-[#172A45]" style="font-family: 'Outfit', sans-serif;">Compromiso y Solidaridad</h4>
+                                <p class="text-[#6D7278] text-sm mt-1">Nos ponemos en tu lugar para ofrecer soluciones personalizadas, trabajando juntos para mejorar la calidad de vida de nuestra comunidad hispana.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: IDENTIDAD VISUAL -->
+                <div id="visual" class="tab-content">
+                    <h2 class="text-3xl font-bold text-[#172A45] mb-6 border-b border-[#F0F4F8] pb-4" style="font-family: 'Outfit', sans-serif;">2. Identidad Visual (Oficial)</h2>
+                    
+                    <h3 class="text-xl font-bold text-[#172A45] mb-4" style="font-family: 'Outfit', sans-serif;">Logotipos</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="border-2 border-[#F0F4F8] p-8 rounded-3xl flex flex-col items-center justify-center bg-white">
+                            <img src="https://i.postimg.cc/c4VJmMW6/Logo-Evelyn-Gonzalez-Usa-(Horizontal).png" alt="Logo Horizontal" class="max-h-16 mb-4" />
+                            <span class="text-xs text-[#6D7278] font-medium tracking-wide uppercase">Formato Horizontal (Web/Banners)</span>
+                        </div>
+                        <div class="border-2 border-[#F0F4F8] p-8 rounded-3xl flex flex-col items-center justify-center bg-[#F0F4F8]">
+                            <img src="https://i.postimg.cc/6qQj2XSd/Logo-Evelyn-Gonzalez-Usa-(Vertical).png" alt="Logo Vertical" class="max-h-24 mb-4" />
+                            <span class="text-xs text-[#6D7278] font-medium tracking-wide uppercase">Formato Vertical (RRSS/Footer)</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-[#172A45] mb-4 mt-8" style="font-family: 'Outfit', sans-serif;">Paleta de Colores</h3>
+                    <p class="text-sm text-[#6D7278] mb-4">Estos son los códigos hexadecimales (HEX) exactos que componen la identidad web y deben usarse en todo material gráfico.</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div class="flex flex-col">
+                            <div class="h-24 bg-[#172A45] rounded-t-2xl shadow-inner"></div>
+                            <div class="p-3 bg-white border border-t-0 border-[#F0F4F8] rounded-b-2xl">
+                                <p class="font-bold text-sm text-[#172A45]">Navy Blue</p>
+                                <p class="text-xs text-[#6D7278] font-mono mt-1">#172A45</p>
+                                <p class="text-[10px] text-[#6D7278] mt-1 uppercase">Principal / Textos</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="h-24 bg-[#C5A880] rounded-t-2xl shadow-inner"></div>
+                            <div class="p-3 bg-white border border-t-0 border-[#F0F4F8] rounded-b-2xl">
+                                <p class="font-bold text-sm text-[#172A45]">Warm Sand</p>
+                                <p class="text-xs text-[#6D7278] font-mono mt-1">#C5A880</p>
+                                <p class="text-[10px] text-[#6D7278] mt-1 uppercase">Acentos / Botones</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="h-24 bg-[#6D7278] rounded-t-2xl shadow-inner"></div>
+                            <div class="p-3 bg-white border border-t-0 border-[#F0F4F8] rounded-b-2xl">
+                                <p class="font-bold text-sm text-[#172A45]">Corporate Grey</p>
+                                <p class="text-xs text-[#6D7278] font-mono mt-1">#6D7278</p>
+                                <p class="text-[10px] text-[#6D7278] mt-1 uppercase">Textos Secundarios</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="h-24 bg-[#F0F4F8] rounded-t-2xl shadow-inner border border-[#e2e8f0]"></div>
+                            <div class="p-3 bg-white border border-t-0 border-[#F0F4F8] rounded-b-2xl">
+                                <p class="font-bold text-sm text-[#172A45]">Light Slate</p>
+                                <p class="text-xs text-[#6D7278] font-mono mt-1">#F0F4F8</p>
+                                <p class="text-[10px] text-[#6D7278] mt-1 uppercase">Fondos Suaves</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="h-24 bg-[#FFFFFF] rounded-t-2xl shadow-inner border border-[#e2e8f0]"></div>
+                            <div class="p-3 bg-white border border-t-0 border-[#F0F4F8] rounded-b-2xl">
+                                <p class="font-bold text-sm text-[#172A45]">White</p>
+                                <p class="text-xs text-[#6D7278] font-mono mt-1">#FFFFFF</p>
+                                <p class="text-[10px] text-[#6D7278] mt-1 uppercase">Fondos Puros</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-[#172A45] mb-4 mt-10" style="font-family: 'Outfit', sans-serif;">Tipografías Oficiales</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl border border-white">
+                            <span class="text-[10px] font-bold text-[#C5A880] uppercase tracking-widest bg-white px-2 py-1 rounded">Títulos y Encabezados</span>
+                            <h1 class="text-4xl font-bold text-[#172A45] mt-4 mb-2" style="font-family: 'Outfit', sans-serif;">Outfit</h1>
+                            <p class="text-sm text-[#6D7278] mt-2 font-medium">Uso: Para todos los titulares (H1, H2, H3), portadas de Reels, y llamadas a la acción fuertes. Transmite modernidad y estructura.</p>
+                            <p class="text-xs text-[#172A45] mt-4 font-mono">Pesos: Regular (400), Medium (500), Bold (700), ExtraBold (800)</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border-2 border-[#F0F4F8]">
+                            <span class="text-[10px] font-bold text-[#6D7278] uppercase tracking-widest bg-[#F0F4F8] px-2 py-1 rounded">Cuerpo de Texto y Párrafos</span>
+                            <h1 class="text-3xl text-[#172A45] mt-4 mb-2 font-bold" style="font-family: 'Plus Jakarta Sans', sans-serif;">Plus Jakarta Sans</h1>
+                            <p class="text-sm text-[#6D7278] mt-2 font-medium">Uso: Para textos largos, descripciones de servicios, carruseles educativos y botones. Garantiza excelente legibilidad.</p>
+                            <p class="text-xs text-[#172A45] mt-4 font-mono">Pesos: Regular (400), Medium (500), SemiBold (600), Bold (700)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: TONO Y VOZ -->
+                <div id="voz" class="tab-content">
+                    <h2 class="text-3xl font-bold text-[#172A45] mb-6 border-b border-[#F0F4F8] pb-4" style="font-family: 'Outfit', sans-serif;">3. Tono y Voz de la Marca</h2>
+                    
+                    <p class="text-[#6D7278] mb-6 text-sm md:text-base leading-relaxed">
+                        Evelyn Gonzalez es la figura central. Aunque tiene más de 20 años de experiencia como abogada en Venezuela, en EE.UU. se presenta como una <strong>Asesora, Preparadora y Guía experta</strong>. Su voz debe transmitir <span class="text-[#C5A880] font-bold">autoridad sin arrogancia</span>, y <span class="text-[#C5A880] font-bold">empatía sin informalidad</span>.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-2xl border-l-4 border-l-[#C5A880] shadow-sm">
+                            <h3 class="text-[#172A45] font-bold mb-4 flex items-center gap-2" style="font-family: 'Outfit', sans-serif;">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#C5A880]"></i> Cómo SÍ sonamos
+                            </h3>
+                            <ul class="space-y-4 text-sm text-[#6D7278]">
+                                <li class="flex flex-col"><strong class="text-[#172A45]">Profesionales pero Accesibles:</strong> <span>Explicamos términos complejos de forma sencilla y clara.</span></li>
+                                <li class="flex flex-col"><strong class="text-[#172A45]">Empáticos y Solidarios:</strong> <span>Validamos el esfuerzo del inmigrante. (Ej: "Sabemos lo importante que es este paso para tu familia").</span></li>
+                                <li class="flex flex-col"><strong class="text-[#172A45]">Seguros y Directos:</strong> <span>Transmitimos orden. Hablamos de "procesos inteligentes" y "trámites sin estrés".</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-2xl border-l-4 border-l-red-500 shadow-sm">
+                            <h3 class="text-[#172A45] font-bold mb-4 flex items-center gap-2" style="font-family: 'Outfit', sans-serif;">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-red-500"></i> Cómo NO sonamos
+                            </h3>
+                            <ul class="space-y-4 text-sm text-[#6D7278]">
+                                <li class="flex flex-col"><strong class="text-[#172A45]">Burocráticos o Fríos:</strong> <span>Evitamos lenguaje legal excesivamente técnico que abrume al cliente.</span></li>
+                                <li class="flex flex-col"><strong class="text-[#172A45]">Alarmistas:</strong> <span>Nunca metemos miedo al cliente sobre su estatus migratorio para generar una venta rápida.</span></li>
+                                <li class="flex flex-col"><strong class="text-[#172A45]">Abogados de EE.UU.:</strong> <span class="text-red-600 font-medium">JAMÁS usamos términos como "nuestro bufete", "defensa legal", o "tu abogada en Florida".</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#172A45] text-white p-8 rounded-3xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#C5A880] opacity-10 rounded-bl-full"></div>
+                        <h4 class="font-bold mb-4 text-lg relative z-10" style="font-family: 'Outfit', sans-serif;">Ejemplo de Copywriting (Antes / Después)</h4>
+                        <div class="grid md:grid-cols-2 gap-6 text-sm relative z-10">
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-red-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-1"><i data-lucide="x-circle" class="w-4 h-4"></i> Incorrecto</p>
+                                <p class="italic text-gray-300">"Ven a mi bufete, soy abogada y te defiendo para que te den la visa rápido. Trae todos los papeles mil veces."</p>
+                            </div>
+                            <div class="bg-white/10 p-4 rounded-xl border border-[#C5A880]/30">
+                                <p class="text-[#C5A880] font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Correcto</p>
+                                <p class="italic text-white">"Da el siguiente paso hacia tu tranquilidad en EE.UU. Como preparadora certificada, guiaré tu trámite migratorio de forma ordenada, optimizada y sin estrés para ti y tu familia."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: CONTENIDO -->
+                <div id="contenido" class="tab-content">
+                    <h2 class="text-3xl font-bold text-[#172A45] mb-6 border-b border-[#F0F4F8] pb-4" style="font-family: 'Outfit', sans-serif;">4. Pilares de Contenido</h2>
+                    
+                    <p class="text-[#6D7278] mb-6">
+                        Para mantener las redes sociales nutridas y estratégicas, el contenido debe rotar entre estos 4 pilares:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-start">
+                            <div class="md:w-1/3">
+                                <span class="bg-[#172A45] text-white text-xs font-bold px-3 py-1 rounded-full">40% del contenido</span>
+                                <h3 class="font-bold text-lg text-[#172A45] mt-3" style="font-family: 'Outfit', sans-serif;">1. Educación y Valor</h3>
+                            </div>
+                            <div class="md:w-2/3 text-sm text-[#6D7278]">
+                                <p>Explicar procesos, fechas límite y requisitos. Traducir lo complejo a simple.</p>
+                                <p class="mt-2 font-bold text-[#172A45]">Ideas:</p>
+                                <ul class="list-disc pl-4 mt-1 space-y-1">
+                                    <li>¿Qué es una LLC y por qué la necesitas para tu negocio?</li>
+                                    <li>3 errores comunes al preparar tus taxes 1040.</li>
+                                    <li>Diferencias entre Notario Público en LATAM vs. Notary Public en USA.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border-2 border-[#F0F4F8] p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-start">
+                            <div class="md:w-1/3">
+                                <span class="bg-[#C5A880] text-white text-xs font-bold px-3 py-1 rounded-full">30% del contenido</span>
+                                <h3 class="font-bold text-lg text-[#172A45] mt-3" style="font-family: 'Outfit', sans-serif;">2. Servicios / Promoción</h3>
+                            </div>
+                            <div class="md:w-2/3 text-sm text-[#6D7278]">
+                                <p>Venta directa pero elegante. Qué hacemos, invitando a la acción (Agendar Cita).</p>
+                                <p class="mt-2 font-bold text-[#172A45]">Ideas:</p>
+                                <ul class="list-disc pl-4 mt-1 space-y-1">
+                                    <li>Promover "Seguros de Salud" durante la temporada de Open Enrollment.</li>
+                                    <li>Carrusel mostrando las áreas de práctica de la web.</li>
+                                    <li>"Agendar tu cita es así de fácil" (Muestra la web en pantalla).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-start">
+                            <div class="md:w-1/3">
+                                <span class="bg-[#6D7278] text-white text-xs font-bold px-3 py-1 rounded-full">15% del contenido</span>
+                                <h3 class="font-bold text-lg text-[#172A45] mt-3" style="font-family: 'Outfit', sans-serif;">3. Autoridad / Experiencia</h3>
+                            </div>
+                            <div class="md:w-2/3 text-sm text-[#6D7278]">
+                                <p>Humanizar la marca y validar la trayectoria de Evelyn Gonzalez.</p>
+                                <p class="mt-2 font-bold text-[#172A45]">Ideas:</p>
+                                <ul class="list-disc pl-4 mt-1 space-y-1">
+                                    <li>Storytime: "+20 años de experiencia trabajando con familias".</li>
+                                    <li>Destacar licencias oficiales vigentes (Notary Public FL, Agente Seguros).</li>
+                                    <li>Día a día en la oficina trabajando en casos.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border-2 border-[#F0F4F8] p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-start">
+                            <div class="md:w-1/3">
+                                <span class="bg-[#172A45] text-white text-xs font-bold px-3 py-1 rounded-full">15% del contenido</span>
+                                <h3 class="font-bold text-lg text-[#172A45] mt-3" style="font-family: 'Outfit', sans-serif;">4. Filosofía / Pruebas</h3>
+                            </div>
+                            <div class="md:w-2/3 text-sm text-[#6D7278]">
+                                <p>Casos de éxito y cómo trabajamos internamente para el cliente.</p>
+                                <p class="mt-2 font-bold text-[#172A45]">Ideas:</p>
+                                <ul class="list-disc pl-4 mt-1 space-y-1">
+                                    <li>Reseñas de clientes ("Logré hacer mis taxes sin estrés").</li>
+                                    <li><strong>Pilar Filosofía:</strong> Hablar sobre nuestro "Proceso Inteligente" (ej. no pedir el acta de matrimonio dos veces al cónyuge).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: MARKETING -->
+                <div id="marketing" class="tab-content">
+                    <h2 class="text-3xl font-bold text-[#172A45] mb-6 border-b border-[#F0F4F8] pb-4" style="font-family: 'Outfit', sans-serif;">5. Ángulos de Venta (Diferenciadores)</h2>
+                    
+                    <p class="text-[#6D7278] mb-8">
+                        Cuando el equipo redacte copys para vender los servicios, deben apalancarse en estos diferenciadores clave que nos separan de la competencia.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl hover:bg-[#172A45] hover:text-white transition-colors group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#C5A880] mb-4 group-hover:bg-[#1E3A5F]">
+                                <i data-lucide="layers" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-[#172A45] mb-2 group-hover:text-white" style="font-family: 'Outfit', sans-serif;">Servicios Centralizados</h3>
+                            <p class="text-sm text-[#6D7278] group-hover:text-gray-300">
+                                <strong>Ángulo:</strong> "No tienes que ir a 5 lugares distintos". Ofrecemos inmigración, notary, taxes, empresas y seguros en un solo lugar seguro y de confianza. Ahorra tiempo y dolores de cabeza.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl hover:bg-[#172A45] hover:text-white transition-colors group relative overflow-hidden">
+                            <div class="absolute -right-4 -top-4 bg-[#C5A880] text-white text-[10px] font-bold px-8 py-1 rotate-45 transform origin-bottom-right uppercase tracking-widest z-10">Clave</div>
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#C5A880] mb-4 group-hover:bg-[#1E3A5F] relative z-10">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-[#172A45] mb-2 group-hover:text-white relative z-10" style="font-family: 'Outfit', sans-serif;">Proceso "Zero Fricción" Familiar</h3>
+                            <p class="text-sm text-[#6D7278] group-hover:text-gray-300 relative z-10">
+                                <strong>Ángulo:</strong> "Respetamos tu tiempo". En nuestros formularios, el cónyuge responde solo lo necesario. Es obvio su estado civil y <strong>no le exigimos volver a subir el acta de matrimonio</strong> si el titular ya lo hizo. Un sistema verdaderamente inteligente.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl hover:bg-[#172A45] hover:text-white transition-colors group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#C5A880] mb-4 group-hover:bg-[#1E3A5F]">
+                                <i data-lucide="book" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-[#172A45] mb-2 group-hover:text-white" style="font-family: 'Outfit', sans-serif;">Trayectoria y Cultura</h3>
+                            <p class="text-sm text-[#6D7278] group-hover:text-gray-300">
+                                <strong>Ángulo:</strong> "Te entendemos porque somos como tú". Evelyn tiene +20 años de experiencia legal en su país de origen. Esa estructura corporativa y profesionalismo ahora están a tu disposición en EE.UU. en tu propio idioma.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#F0F4F8] p-6 rounded-2xl hover:bg-[#172A45] hover:text-white transition-colors group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#C5A880] mb-4 group-hover:bg-[#1E3A5F]">
+                                <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-[#172A45] mb-2 group-hover:text-white" style="font-family: 'Outfit', sans-serif;">Trámites 100% Legales</h3>
+                            <p class="text-sm text-[#6D7278] group-hover:text-gray-300">
+                                <strong>Ángulo:</strong> "Seguridad garantizada". Destacar siempre que Evelyn cuenta con Licencias Oficiales Vigentes en el estado de Florida (Notary, Seguros). Esto da tranquilidad inmediata.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 6: REGLAS -->
+                <div id="reglas" class="tab-content">
+                    <h2 class="text-3xl font-bold text-red-700 mb-6 border-b border-red-100 pb-4" style="font-family: 'Outfit', sans-serif;">
+                        6. Reglas de Oro (Compliance Legal)
+                    </h2>
+                    
+                    <div class="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-2xl mb-8 shadow-sm">
+                        <p class="text-red-800 font-bold mb-2 text-lg" style="font-family: 'Outfit', sans-serif;">⚠️ AVISO LEGAL OBLIGATORIO ⚠️</p>
+                        <p class="text-red-900 text-sm leading-relaxed">
+                            El equipo de Redes Sociales, Atención al Cliente y Marketing <strong>DEBE</strong> memorizar y aplicar estrictamente estas reglas en todos los textos, imágenes, videos, reels y respuestas de DM. Un error aquí puede causar problemas legales serios en EE.UU.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-200 transition-colors">
+                            <h4 class="font-bold text-[#172A45] text-lg mb-3 flex items-center gap-3" style="font-family: 'Outfit', sans-serif;">
+                                <span class="bg-red-100 text-red-600 w-8 h-8 flex items-center justify-center rounded-full text-sm">01</span> 
+                                La Palabra "Abogado"
+                            </h4>
+                            <p class="text-sm text-[#6D7278]">
+                                <strong class="text-red-600">NUNCA</strong> utilizar la frase "Abogada en Estados Unidos", "Tu abogada", "Asesoría Legal", "Consejo Jurídico" o "Bufete" al referirse a los servicios prestados en USA.
+                            </p>
+                            <div class="mt-3 p-3 bg-[#F0F4F8] rounded-xl border border-gray-200">
+                                <p class="text-xs text-[#172A45]"><strong>CÓMO DECIRLO:</strong> "Preparadora de Formas Migratorias", "Asesora de Trámites", "Notary Public de Florida", "Agente Licenciada de Seguros". Solo se menciona su título de abogada contextualizando explícitamente que es egresada en Venezuela.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-200 transition-colors">
+                            <h4 class="font-bold text-[#172A45] text-lg mb-3 flex items-center gap-3" style="font-family: 'Outfit', sans-serif;">
+                                <span class="bg-red-100 text-red-600 w-8 h-8 flex items-center justify-center rounded-full text-sm">02</span> 
+                                Disclaimer en la Web y Redes
+                            </h4>
+                            <p class="text-sm text-[#6D7278]">
+                                El footer de la web tiene un texto oficial que debe respetarse. Si se hacen Lives en Instagram/Facebook o videos respondiendo preguntas complejas, se debe usar este aviso legal oral o por escrito:
+                            </p>
+                            <blockquote class="mt-3 p-4 bg-white border border-[#C5A880]/30 rounded-xl italic text-sm text-[#172A45] font-medium shadow-sm">
+                                "Aviso Legal: Evelyn Gonzalez no es abogada en los Estados Unidos y tampoco representa a un bufete de abogados en los Estados Unidos, por lo tanto, no proporcionamos consejos ni asesorías legales."
+                            </blockquote>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-200 transition-colors">
+                            <h4 class="font-bold text-[#172A45] text-lg mb-3 flex items-center gap-3" style="font-family: 'Outfit', sans-serif;">
+                                <span class="bg-red-100 text-red-600 w-8 h-8 flex items-center justify-center rounded-full text-sm">03</span> 
+                                Promesas de Resultados
+                            </h4>
+                            <p class="text-sm text-[#6D7278]">
+                                <strong class="text-red-600">NUNCA</strong> prometer resultados garantizados en procesos de inmigración o visas. (Ej: "Te garantizamos la aprobación de la visa"). Las decisiones finales las toma única y exclusivamente USCIS.
+                            </p>
+                            <div class="mt-3 p-3 bg-[#F0F4F8] rounded-xl border border-gray-200">
+                                <p class="text-xs text-[#172A45]"><strong>CÓMO DECIRLO:</strong> "Te acompañamos y preparamos tu solicitud de forma impecable, siguiendo todos los lineamientos oficiales, para maximizar tus posibilidades y evitar retrasos."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para cambiar de pestañas e iniciar iconos -->
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        function switchTab(tabId, btnElement) {
+            // 1. Ocultar todos los contenidos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // 2. Mostrar el contenido seleccionado
+            const selectedContent = document.getElementById(tabId);
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+
+            // 3. Reiniciar estilos de todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.className = "tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 text-gray-300 hover:bg-[#1E3A5F] hover:text-white";
+            });
+
+            // 4. Aplicar estilos de "activo" al botón clickeado
+            if (btnElement) {
+                btnElement.className = "tab-btn w-full flex items-center gap-3 px-6 py-3 text-left transition-colors duration-200 bg-[#C5A880] text-[#172A45] font-bold";
+            }
+        }
+    </script>
+</body>
+</html>
